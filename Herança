@@ -1,0 +1,25 @@
+class Animal {
+  constructor(name) {
+    this.name = name;
+  }
+
+  speak() {
+    console.log(`${this.name} fala.`);
+  }
+}
+
+class Dog extends Animal {
+  constructor(name) {
+    super(name); // chama o construtor da classe pai
+  }
+
+  speak() {
+    console.log(`${this.name} latiu.`);
+  }
+}
+
+let animal = new Animal('Animal');
+animal.speak(); // Animal fala.
+
+let dog = new Dog('Cachorro');
+dog.speak(); // Cachorro latiu.
